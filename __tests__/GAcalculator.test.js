@@ -12,8 +12,12 @@ describe('gaCalculator', () => {
     let mercurianYears = calculator.mercury();
     expect(mercurianYears).toEqual(145);
   });
-  test('should return the age in Venus years',() => {
+  test('should return the age in Venus years (56)',() => {
     let venusYears = calculator.venus();
     expect(venusYears).toEqual(56);
+  });
+  test('should return the age in Mars years (18)',() => {
+    let marsYears = calculator.mars();
+    expect(marsYears).toEqual(18);
   });
 });

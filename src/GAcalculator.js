@@ -23,6 +23,9 @@ export class Calculator {
     let venusAge = Math.floor(this.age() / .62);
     return venusAge;
   }
+  mars(){
+    return this.age();
+  }
 
 
 
