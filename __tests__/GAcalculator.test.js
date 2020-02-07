@@ -1,16 +1,23 @@
 /* eslint-disable no-undef */
 import { Calculator } from "./../src/gaCalculator";
+
 // These tests are written to pass based on today 35 years ago  
 describe('gaCalculator', () => {
   let today = new Date();
   let todayMonth = (today.getMonth() + 1);
   let todayDate = (today.getDate());
+  let tomorrowDate = (todayDate + 1)
   let thirty5YearsAgo = (today.getFullYear() - 35);
   let calculator = new Calculator(thirty5YearsAgo,todayMonth,todayDate);
+  let calculatorYesterday = new Calculator(thirty5YearsAgo,todayMonth,tomorrowDate);
 
   test('should return the age 35', () => {
     let yearsOld = calculator.age();
     expect(yearsOld).toEqual(35);
+  });
+  test('should return the age 34, testing if statement in this.age() function', () => {
+    let TomorrowsAge = calculatorYesterday.age();
+    expect(TomorrowsAge).toEqual(34);
   });
   test('should return the age in Mercury years (145)',() => {
     let mercurianYears = calculator.mercury();
