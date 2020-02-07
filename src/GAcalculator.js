@@ -20,7 +20,7 @@ export class Calculator {
     return mercuryAge;
   }
   venus(){
-    let venusAge = this.age();
+    let venusAge = Math.floor(this.age() / .62);
     return venusAge;
   }
 
