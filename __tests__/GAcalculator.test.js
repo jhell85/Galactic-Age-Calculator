@@ -1,8 +1,12 @@
 /* eslint-disable no-undef */
 import { Calculator } from "./../src/gaCalculator";
-// These tests written to pass based on a date that is 35 years of age as of today, the date would need to be changed in Calculator() 2 lines down to todays date 35 years ago to pass the tests.  
+// These tests are written to pass based on today 35 years ago  
 describe('gaCalculator', () => {
-  let calculator = new Calculator(1985,2,7);
+  let today = new Date();
+  let todayMonth = (today.getMonth() + 1);
+  let todayDate = (today.getDate());
+  let thirty5YearsAgo = (today.getFullYear() - 35);
+  let calculator = new Calculator(thirty5YearsAgo,todayMonth,todayDate);
 
   test('should return the age 35', () => {
     let yearsOld = calculator.age();
