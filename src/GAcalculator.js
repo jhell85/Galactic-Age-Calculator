@@ -6,15 +6,19 @@ export class Calculator {
   }
 
   age(){
-    
     let today = new Date();
     let birthDate = new Date(this.year, this.month, this.day);
     let age = today.getFullYear() - birthDate.getFullYear();
-    let m = today.getMonth() - birthDate.getMonth();
+    let m = (today.getMonth() + 1) - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age = age - 1;
     }
     return age;
+  }
+  mercury(){
+    let age = this.age();
+    return age;
+
   }
 
 
