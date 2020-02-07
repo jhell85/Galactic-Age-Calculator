@@ -48,12 +48,13 @@ npm run start
 ## Specs
 ### Behavior Driven Development Spec List
 
-Behavoir | Input | Output
+Behavior | Input | Output
 :---------|:------:|:------:
-|The program will return their age in Mercury years | '20' | '83 Mercury years' |
-|The program will return the age in Venus years| '20' | '32.4 Venus years'
-|The program will return the age in Mars years| '20' | '10.6 Mars years'
-The program will return the age in Jupiter years| '20' | 1.7 Jupiter years
+The program will return their age in Mercurian years | '20' | '83 Mercurian years' |
+The program will return the age in Venusian years| '20' | '32.4 Venusian years'
+The program will return the age in Martian years| '20' | '10.6 Martian years'
+The program will return the age in Jovian years| '20' | 1.7 Jovian years
+The program will give a years left expectancy on each planet based on a few inputs entered by the user.| "smoker", "safe neighborhood", "sedative" | 'life expectancy 100 more Mercurian years left to live' {repeat for other planets} |  
 
 
 ## Support 
