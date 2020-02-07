@@ -31,7 +31,4 @@ export class Calculator {
     let marsAge = Math.floor(this.age() / 11.86);
     return marsAge;
   }
-
-
-
 }
