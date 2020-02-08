@@ -17,4 +17,10 @@ export class LifeStyle {
       this.age -= 4;
     }
   }
+  activityLevelScore(){
+    if (this.activityLevel === "safe"){
+      this.age;
+    }
+  }
+  
 }
