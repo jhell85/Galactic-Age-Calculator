@@ -1,4 +1,4 @@
-export class Calculator {
+export class AgeCalculator {
   constructor(year, month, day){
     this.year = year;
     this.month = month;
@@ -15,20 +15,26 @@ export class Calculator {
     }
     return age;
   }
+}
+export class GACalculator{
+  constructor(age){
+    this.age = age;
+  }
+  
   mercury(){
-    let mercuryAge = Math.floor(this.age() / .24);
+    let mercuryAge = Math.floor(this.age / .24);
     return mercuryAge;
   }
   venus(){
-    let venusAge = Math.floor(this.age() / .62);
+    let venusAge = Math.floor(this.age / .62);
     return venusAge;
   }
   mars(){
-    let marsAge = Math.floor(this.age() / 1.88);
+    let marsAge = Math.floor(this.age / 1.88);
     return marsAge;
   }
   jupiter(){
-    let marsAge = Math.floor(this.age() / 11.86);
+    let marsAge = Math.floor(this.age / 11.86);
     return marsAge;
   }
 }

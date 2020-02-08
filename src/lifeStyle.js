@@ -25,7 +25,5 @@ export class LifeStyle {
     } else if (this.activityLevel === "fairlyActive"){
       this.age -= 9;
     }
-
-  }
-  
+  } 
 }

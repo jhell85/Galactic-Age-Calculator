@@ -1,46 +1,50 @@
 /* eslint-disable no-undef */
-import { Calculator } from "./../src/gaCalculator";
+import { AgeCalculator, GACalculator } from "./../src/gaCalculator";
 import { LifeStyle } from "./../src/lifeStyle";
 
 // These tests are written to pass based on today 35 years ago  
-describe('gaCalculator', () => {
+describe('Galactic Age Calculator app tests', () => {
   let today = new Date();
   let todayMonth = (today.getMonth() + 1);
   let todayDate = (today.getDate());
   let tomorrowDate = (todayDate + 1);
   let thirty5YearsAgo = (today.getFullYear() - 35);
-  let calculator = new Calculator(thirty5YearsAgo,todayMonth,todayDate);
-  let calculatorYesterday = new Calculator(thirty5YearsAgo,todayMonth,tomorrowDate);
+  let ageCalculator = new AgeCalculator(thirty5YearsAgo,todayMonth,todayDate);
+  let ageCalculatorYesterday = new AgeCalculator(thirty5YearsAgo,todayMonth,tomorrowDate);
 
-  describe('Calculator tests', () => {
+  describe('AgeCalculator tests', () => {
     test('should return the age 35', () => {
-      let yearsOld = calculator.age();
+      let yearsOld = ageCalculator.age();
       expect(yearsOld).toEqual(35);
     });
     test('should return the age 34, testing if statement in this.age() function', () => {
-      let TomorrowsAge = calculatorYesterday.age();
-      expect(TomorrowsAge).toEqual(34);
+      let tomorrowsAge = ageCalculatorYesterday.age();
+      expect(tomorrowsAge).toEqual(34);
     });
+  });
+  
+  describe('GACalculator tests',() => {
+    let gaCalculator = new GACalculator(ageCalculator.age());
     test('should return the age in Mercury years (145)',() => {
-      let mercurianYears = calculator.mercury();
+      let mercurianYears = gaCalculator.mercury();
       expect(mercurianYears).toEqual(145);
     });
     test('should return the age in Venus years (56)',() => {
-      let venusianYears = calculator.venus();
+      let venusianYears = gaCalculator.venus();
       expect(venusianYears).toEqual(56);
     });
     test('should return the age in Mars years (18)',() => {
-      let martianYears = calculator.mars();
+      let martianYears = gaCalculator.mars();
       expect(martianYears).toEqual(18);
     });
     test('should return the age in jupiter years (2)',() => {
-      let jovianYears = calculator.jupiter();
+      let jovianYears = gaCalculator.jupiter();
       expect(jovianYears).toEqual(2);
     });
   });
 
   describe('Lifestyle tests', () => {
-    let age = calculator.age();
+    let age = ageCalculator.age();
     let lifeStyle = new LifeStyle(false, 'average', 'moderate', age);
 
     test('should test smokingScore method and not alter age constructor',() => {
@@ -57,13 +61,13 @@ describe('gaCalculator', () => {
       lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(35);
     });
-    test('should test neighborhoodScore method and add 4 to age',() => {
+    test('should test neighborhoodScore method and add 4 to age constructor',() => {
       lifeStyle.age = age;
       lifeStyle.neighborhood = "ghetto";
       lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(39);
     });
-    test('should test neighborhoodScore method and subtract 4 to age',() => {
+    test('should test neighborhoodScore method and subtract 4 to age constructor',() => {
       lifeStyle.age = age;
       lifeStyle.neighborhood = "safe";
       lifeStyle.neighborhoodScore();
