@@ -86,5 +86,11 @@ describe('gaCalculator', () => {
       lifeStyle.activityLevelScore();
       expect(lifeStyle.age).toEqual(23);
     });
+    test('should test activityLevelScore method and subtract 9 to age constructor',() => {
+      lifeStyle.age = age;
+      lifeStyle.activityLevel = "fairlyActive";
+      lifeStyle.activityLevelScore();
+      expect(lifeStyle.age).toEqual(26);
+    });
   });
 });
