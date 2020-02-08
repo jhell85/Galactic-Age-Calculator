@@ -1,9 +1,10 @@
 export class LifeStyle {
-  constructor(smoker, neighborhood, activityLevel, age){
+  constructor(smoker, neighborhood, activityLevel, age, lifeExpectancy){
     this.smoker = smoker;
     this.neighborhood = neighborhood;
     this.activityLevel = activityLevel;
     this.age = age;
+    this.lifeExpectancy = lifeExpectancy
   }
   smokerScore(){
     if (this.smoker === true){
@@ -26,4 +27,12 @@ export class LifeStyle {
       this.age -= 9;
     }
   } 
+  yearsLeft(){
+    let averageAgeExpectancy  = 78.2;
+    this.smokerScore();
+    this.neighborhoodScore();
+    this.activityLevelScore();
+    console.log(this.age);
+    return this.age - averageAgeExpectancy;
+  }
 }

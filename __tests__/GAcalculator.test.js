@@ -45,7 +45,7 @@ describe('Galactic Age Calculator app tests', () => {
 
   describe('Lifestyle tests', () => {
     let age = ageCalculator.age();
-    let lifeStyle = new LifeStyle(false, 'average', 'moderate', age);
+    let lifeStyle = new LifeStyle(false, 'average', 'moderate', age, null);
 
     test('should test smokingScore method and not alter age constructor',() => {
       lifeStyle.smokerScore();
@@ -95,6 +95,14 @@ describe('Galactic Age Calculator app tests', () => {
       lifeStyle.activityLevel = "fairlyActive";
       lifeStyle.activityLevelScore();
       expect(lifeStyle.age).toEqual(26);
+    });
+    test('should test yearsLeft method and return lifeExpectancy constructor based off of 35 in age constructor',() => {
+      lifeStyle.age = age;
+      lifeStyle.smokerScore = false;
+      lifeStyle.neighborhoodScore = "average";
+      lifeStyle.activityLevelScore = 'moderate'
+      lifeStyle.yearsLeft();
+      expect(lifeStyle.lifeExpectancy).toEqual(43.2);
     });
   });
 });
