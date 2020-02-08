@@ -1,4 +1,4 @@
-export class lifeStyle {
+export class LifeStyle {
   constructor(smoker, neighborhood, activityLevel, age){
     this.smoker = smoker;
     this.neighborhood = neighborhood;
@@ -7,7 +7,10 @@ export class lifeStyle {
   }
   smokerScore(){
     if (this.smoker === true){
-      return;
+      this.age += 10;
     }
+  }
+  neighborhoodScore(){
+    return;
   }
 }
