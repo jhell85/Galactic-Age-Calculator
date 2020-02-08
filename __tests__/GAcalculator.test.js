@@ -57,7 +57,7 @@ describe('gaCalculator', () => {
       lifeStyle.age = age;
       lifeStyle.neighborhood = "safe";
       lifeStyle.neighborhoodScore();
-      expect(lifeStyle.age).toEqual(39);
+      expect(lifeStyle.age).toEqual(31);
     });
   });
 });

@@ -13,6 +13,8 @@ export class LifeStyle {
   neighborhoodScore(){
     if (this.neighborhood === "ghetto"){
       this.age += 4;
+    } else if (this.neighborhood === "safe"){
+      this.age -= 4;
     }
   }
 }
