@@ -19,7 +19,7 @@ export class LifeStyle {
   }
   activityLevelScore(){
     if (this.activityLevel === "sedentary"){
-      this.age //+= 15;
+      this.age += 15;
     } else if (this.activityLevel === "veryActive"){
       this.age //-= 12;
     } else if (this.activityLevel === "fairlyActive"){
