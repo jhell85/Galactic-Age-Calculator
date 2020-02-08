@@ -59,5 +59,11 @@ describe('gaCalculator', () => {
       lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(31);
     });
+    test('should test neighborhood method and not alter age constructor',() => {
+      lifeStyle.age = age;
+      lifeStyle.neighborhood = "average";
+      lifeStyle.neighborhoodScore();
+      expect(lifeStyle.age).toEqual(39);
+    });
   });
 });
