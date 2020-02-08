@@ -39,31 +39,35 @@ describe('gaCalculator', () => {
     });
   });
 
-  describe('lifestyle', () => {
+  describe('Lifestyle tests', () => {
     let age = calculator.age();
-    let lifeStyle = new LifeStyle(true, 'average', 'moderate', age);
+    let lifeStyle = new LifeStyle(false, 'average', 'moderate', age);
 
-    test('should add 10 to age constructor',() => {
+    test('should test smokingScore method and not alter age constructor',() => {
+      lifeStyle.smokerScore();
+      expect(lifeStyle.age).toEqual(35);
+    });
+    test('should test smokingScore method and add 10 to age constructor',() => {
+      lifeStyle.smoker = true;
       lifeStyle.smokerScore();
       expect(lifeStyle.age).toEqual(45);
     });
-    test('should test neighborhood method and add 4 to age',() => {
+    test('should test neighborhoodScore method and not alter age constructor',() => {
+      lifeStyle.age = age;
+      lifeStyle.neighborhoodScore();
+      expect(lifeStyle.age).toEqual(35);
+    });
+    test('should test neighborhoodScore method and add 4 to age',() => {
       lifeStyle.age = age;
       lifeStyle.neighborhood = "ghetto";
       lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(39);
     });
-    test('should test neighborhood method and subtract 4 to age',() => {
+    test('should test neighborhoodScore method and subtract 4 to age',() => {
       lifeStyle.age = age;
       lifeStyle.neighborhood = "safe";
       lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(31);
-    });
-    test('should test neighborhood method and not alter age constructor',() => {
-      lifeStyle.age = age;
-      lifeStyle.neighborhood = "average";
-      lifeStyle.neighborhoodScore();
-      expect(lifeStyle.age).toEqual(35);
     });
   });
 });
