@@ -11,6 +11,8 @@ export class LifeStyle {
     }
   }
   neighborhoodScore(){
-    return;
+    if (this.neighborhood === "ghetto"){
+      this.age += 4;
+    }
   }
 }

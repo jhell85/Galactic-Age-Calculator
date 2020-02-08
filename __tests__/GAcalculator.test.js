@@ -49,7 +49,10 @@ describe('gaCalculator', () => {
     });
     test('should test neighborhood method and add 4 to age',() => {
       lifeStyle.age = age;
+      lifeStyle.neighborhood = "ghetto";
+      lifeStyle.neighborhoodScore();
       expect(lifeStyle.age).toEqual(39);
     });
+    
   });
 });
