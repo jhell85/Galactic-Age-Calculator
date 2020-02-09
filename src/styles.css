@@ -3,5 +3,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Lalezar', cursive;
-  color: floralwhite;
+  color: #D3DEE1;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
