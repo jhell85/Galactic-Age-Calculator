@@ -1,0 +1,68 @@
+<form>
+  <div class="container">
+    <h4 class="text-center">We have a small survey</h4>
+    <div class="container">
+      <div class="row">
+        <div class="form-check col-md-3">
+          <div class="form-group">
+            <label for="ageInput">What's your age?</label>
+            <input type="number" class="form-control" id="ageInput">
+          </div>
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            checkbox if you smoke
+          </label>
+        </div>
+        <div class="col-md-4">
+          <h5>Would you consider your neighborhood to be...</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="neighborhood" id="neighborhood1" value="ghetto" checked>
+            <label class="form-check-label" for="neighborhood1">
+              not very safe
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="neighborhood" id="neighborhood2" value="normal">
+            <label class="form-check-label" for="neighborhood2">
+              fairly safe
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="neighborhood" id="neighborhood3" value="safe">
+            <label class="form-check-label" for="neighborhood3">
+              very safe
+            </label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Would you consider your activity level to be...</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="activity" id="activity1" value="sedentary" checked>
+            <label class="form-check-label" for="activity1">
+              sedentary I rarely exercise.
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="activity" id="activity2" value="average">
+            <label class="form-check-label" for="activity2">
+              I exercise at least once a week
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="activity" id="activity3" value="fairlyActive">
+            <label class="form-check-label" for="activity3">
+              I exercise at least 3 times a week
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="activity" id="activity4" value="veryActive">
+            <label class="form-check-label" for="activity4">
+              I exercise 6 or more times a week
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
