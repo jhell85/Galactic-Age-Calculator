@@ -6,21 +6,21 @@
 </head>
 
 <body>
-  <form>
+  <form action="/action_page.php">
     <div class="container">
       <h3>Find your age and life expectancy on other planets with our short survery</h3>
       <div class="container">
         <div class="row">
           <div class="form-check col-md-3">
-            <div class="form-group">
-              <label for="ageInput">What's your age?</label>
-              <input type="number" class="form-control" id="ageInput">
+            <div>Birthday: <input type="date" class="bday" name="bday"></div>
+            <div class="smokers-div">
+              <input class="form-check-input" type="checkbox" id="smoker">
+              <label class="form-check-label" for="defaultCheck1">
+                do you smoke?
+              </label>
             </div>
-            <input class="form-check-input" type="checkbox" id="smoker">
-            <label class="form-check-label" for="defaultCheck1">
-              checkbox if you smoke
-            </label>
           </div>
+          <div class="col-md-1"></div>
           <div class="col-md-4">
             <h5>Would you consider your neighborhood to be...</h5>
             <div class="form-check">
