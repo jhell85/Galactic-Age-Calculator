@@ -31,4 +31,10 @@ export class LifeStyle {
     return averageAgeExpectancy - this.age;
   }
 }
+export function methodCaller(LSClass){
+  LSClass.smokerScore();
+  LSClass.neighborhoodScore();
+  LSClass.activityLevelScore();
+  return LSClass.yearsLeft();
+}
 
